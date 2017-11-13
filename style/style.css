@@ -1,0 +1,25 @@
+body {
+    margin-left: 20px;
+}
+
+
+.btn {
+    margin: 10px;
+}
+
+input {
+    width: 150px;
+    margin-right: 10px;
+}
+
+#result {
+    width: 100px;
+    border: 1px solid black;
+}
+
+aside input {
+    height: 100%;
+    width: 150px;
+    height: 500px;
+
+}

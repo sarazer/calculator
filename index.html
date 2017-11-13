@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Calculator</title>
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="">
- 
+    <link rel="stylesheet" href="style/style.css">
+
 </head>
 
 <body>
-    <div id= "content">
-       <h1>Calculator:</h1>
-            <input id= "num1" placeholder="Type a number"> 
-            <input id= "num2" placeholder="Type a number" >
-         <div>
-            <input name= "mathSign" type=radio value="multiple">
-             * 
-            <input name= "mathSign" type=radio value="division" >
-             / 
-            <input name= "mathSign" type=radio value="addition" >
-             +
-            <input name= "mathSign" type=radio value="subtraction" >
-             -   
+    <div id="content">
+        <div class="row">
+            <h1>Calculator:</h1>
         </div>
-        <button id= "resultBtn"> result</button>
-       
-        
-        <div id= "mathExercise"></div>
-         <div>   
-        <h1>last:</h1>
-       
+
+        <div class="col-xs-6 form-group">
+            <div class="row">
+                <label>First number:</label>
+                <input type="text" id="num1" placeholder="Type a number">
+                <br/><br/>
+            </div>
+            <div class="row">Choose operator:
+                <select id="operators">
+                     <option value="*">*</option>
+                     <option value="/">/</option>
+                     <option value="+">+</option>
+                     <option value="-">-</option>
+                </select>
+            </div>
+            <br/><br/>
+
+            <div class="row">
+                <label>Second number:</label>
+                <input type="text" id="num2" placeholder="Type a number">
+                <br/><br/>
+            </div>
+
+            <div class="row">
+                <div class=col-xs>
+                    <label>Result:</label>
+                    <div class=col-xs id="result" ></div>
+                </div>
+            </div>
+            <div class="row">
+                <button id="calc" type="button" class="btn btn-success">Calculate</button>
+                <button id="clear" type="button" class="btn btn-default">Clear</button>
+            </div>
+
         </div>
-</div>
-     <script src="cal.js"></script>
-    
+    </div>
+
+    <aside class="col-xs-6 form-group">
+        <div class="row">
+            <label>Previous Results:</label>
+            <br/><br/>
+            <textarea id='prevResult' rows="10" cols="20">
+            </textarea>
+            <br/><br/>
+        </div>
+    </aside>
+
+    <script src="calc.js"></script>
+
 </body>
+
 </html>
